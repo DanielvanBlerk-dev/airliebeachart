@@ -889,7 +889,7 @@ function renderGallery() {
         <button class="admin-ctrl-btn sold-toggle" onclick="toggleSold(${art.id})">
           ${art.sold ? 'Mark available' : 'Mark sold'}
         </button>
-        <button class="admin-ctrl-btn del" onclick="confirmDelete(${art.id}, ${JSON.stringify(art.title)})">
+        <button class="admin-ctrl-btn del" onclick="confirmDelete(${art.id}, '${art.title.replace(/'/g, "\\'")}')">
           Delete
         </button>
       </div>
